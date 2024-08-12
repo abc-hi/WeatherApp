@@ -7,7 +7,7 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
-    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=0eb2f9e6dd554873aa7120429230511&q=${city}&aqi=no;`;
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=f070442ba0264bd0a1c54255241208&q=${city}&aqi=no`;
 
     fetch(apiUrl)
       .then((res) => {
@@ -61,13 +61,7 @@ function App() {
                 unit: "%",
               }}
             />
-            <Highlights
-              stats={{
-                title: "Visibility",
-                value: weatherData.current.vis_miles,
-                unit: "miles",
-              }}
-            />
+           
             <Highlights
               stats={{
                 title: "Air Pressure",
